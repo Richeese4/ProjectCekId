@@ -217,7 +217,7 @@ async function callAPI(request) {
       return {success:true,game:"Point Blank",id:id,name:data.confirmationFields.username}
     }
     if (path.includes('/ballpool')) {
-      const body = `voucherPricePoint.id=272568&voucherPricePoint.price=350000.0&voucherPricePoint.variablePrice=0&user.userId=${id}&user.zoneId=&voucherTypeName=EIGHT_BALL_POOL&shopLang=id_ID&voucherTypeId=1&gvtId=1`
+      const body = `voucherPricePoint.id=272568&voucherPricePoint.price=350000.0&voucherPricePoint.variablePrice=0&user.userId=${id}&user.zoneId=&voucherTypeName=EIGHT_BALL_POOL&shopLang=id_ID`
       const request = new Request(endpoint, {
         method: 'POST',
         headers: {
