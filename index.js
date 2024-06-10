@@ -216,6 +216,19 @@ async function callAPI(request) {
       const data = await response.json()
       return {success:true,game:"Point Blank",id:id,name:data.confirmationFields.username}
     }
+    if (path.includes('/ballpool')) {
+      const body = `voucherPricePoint.id=272568&voucherPricePoint.price=350000.0&voucherPricePoint.variablePrice=0&user.userId=${id}&user.zoneId=&voucherTypeName=EIGHT_BALL_POOL&shopLang=id_ID&voucherTypeId=1&gvtId=1`
+      const request = new Request(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body
+      })
+      const response = await fetch(request)
+      const data = await response.json()
+      return {success:true,game:"8 Ball Pool",id:id,name:data.confirmationFields.username}
+    }
     else {
       return {success:false,message:"Bad request"}
     }
