@@ -1,2 +1,3 @@
-wrangler
-npm update wrangler
+name = "projectcekid"
+workers_dev = true
+compatibility_date = "2022-01-01"
