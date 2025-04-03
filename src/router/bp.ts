@@ -1,7 +1,7 @@
 import { hitCoda, Result } from '../utils'
 
 export default async function bp(id: number): Promise<Result> {
-  const body = `voucherPricePoint.id=205527&voucherPricePoint.price=14000&voucherPricePoint.variablePrice=0&user.userId=${id}&voucherTypeName=EIGHT_BALL_POOL&shopLang=id_ID`
+  const body = `voucherPricePoint.id=205527&voucherPricePoint.price=14000&voucherPricePoint.variablePrice=0&user.userId=${id}&voucherTypeName=EIGHT_BALL_POOL&shopLang=id_ID&voucherTypeId=1&gvtId=1`
   const data = await hitCoda(body)
   return {
     success: true,
