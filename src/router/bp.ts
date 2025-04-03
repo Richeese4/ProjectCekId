@@ -7,6 +7,6 @@ export default async function bp(id: number): Promise<Result> {
     success: true,
     game: '8 Ball Pool',
     id,
-    name: data.confirmationFields.roles[0].role
+    name: data.confirmationFields.username
   }
 }
