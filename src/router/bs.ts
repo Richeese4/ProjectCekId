@@ -1,6 +1,6 @@
 import { hitCoda, Result } from '../utils'
 
-export default async function bs(id: number, zone: number): Promise<Result> {
+export default async function bs(id: number, zone: -1): Promise<Result> {
   const body = `voucherPricePoint.id=895131&voucherPricePoint.price=14000&voucherPricePoint.variablePrice=0&user.userId=${id}&voucherTypeName=BLOOD_STRIKE&shopLang=id_ID&voucherTypeId=358&gvtId=508`
   const data = await hitCoda(body)
   return {
