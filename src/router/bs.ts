@@ -7,6 +7,6 @@ export default async function ff(id: number): Promise<Result> {
     success: true,
     game: 'Blood Strike',
     id,
-    name: data.confirmationFields.roles[0].role
+    name: data.confirmationFields.username
   }
 }
