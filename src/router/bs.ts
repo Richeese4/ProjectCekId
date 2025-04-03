@@ -7,6 +7,7 @@ export default async function bs(id: number): Promise<Result> {
     success: true,
     game: 'Blood Strike',
     id,
+    server: zone,
     name: data.confirmationFields.roles[0].role
   }
 }
